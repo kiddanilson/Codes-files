@@ -5,9 +5,9 @@ ini_set('display_errors', 1);
 
 // Database connection details
 $servername = "localhost";
-$username = "dee";
-$password = "root";
-$dbname = "market";
+$username = "#";
+$password = "#";
+$dbname = "#";
 
 
 // Create connection
@@ -31,7 +31,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $business_type = $_POST['business_type'];
 
     // Prepare SQL statement with placeholders
-    $stmt = $conn->prepare("INSERT INTO waitlist (first_name, last_name, email, phone, region, city, is_business, business_type) VALUES (?, ?, ?, ?, ?, ?, ?, ?)");
+    $stmt = $conn->prepare("INSERT INTO your_table (first_name, last_name, email, phone, region, city, is_business, business_type) VALUES (?, ?, ?, ?, ?, ?, ?, ?)");
     
     if ($stmt === false) {
         die('Prepare failed: ' . htmlspecialchars($conn->error));
